@@ -1,0 +1,21 @@
+service:
+  tls:
+    enabled: "true"
+    secretName: backstage-secret
+    issuer: backstage-issuer
+
+cert:
+  email: vamsi.krishna@tensure.io
+  gcpProject: vamsi-krishna-sandbox
+  issuer: kargo-issuer
+  secretName: kargo-secret
+  acmeServer: https://acme-v02.api.letsencrypt.org/directory
+
+  tlsCrt: ""
+  tlsKey: ""
+
+ingress:
+  host: kargo.ioinfo.shop
+  enabled: true
+  class: gce
+  allowHttp: "true"
