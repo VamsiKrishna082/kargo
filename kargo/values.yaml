@@ -15,7 +15,7 @@ cert:
   tlsKey: ""
 
 ingress:
-  host: kargo.ioinfo.shop
+  host: kargo-new.ioinfo.shop
   enabled: true
   class: gce
   allowHttp: "true"
