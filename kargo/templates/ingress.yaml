@@ -4,8 +4,9 @@ metadata:
   name: {{ include "kargo.fullname" . }}-ingress
   annotations:
     kubernetes.io/ingress.class: {{ .Values.ingress.class }}
-    # kubernetes.io/ingress.allow-http: "true"
+    kubernetes.io/ingress.allow-http: "false"
     external-dns.alpha.kubernetes.io/hostname: {{ .Values.ingress.host }}
+    networking.gke.io/ssl-redirect: "true" 
     cert-manager.io/cluster-issuer: {{ .Values.cert.issuer }}
 spec:
   tls:

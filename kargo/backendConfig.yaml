@@ -1,0 +1,14 @@
+apiVersion: cloud.google.com/v1
+kind: BackendConfig
+metadata:
+  name: kargo-api-backendconfig
+  namespace: kargo
+spec:
+  healthCheck:
+    checkIntervalSec: 30
+    port: 443
+    type: HTTPS
+    requestPath: /healthz
+    timeoutSec: 10
+    unhealthyThreshold: 3
+    healthyThreshold: 1
