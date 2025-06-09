@@ -15,7 +15,7 @@ spec:
       secretName: {{ .Values.cert.secretName }}
   rules:
     - host: {{ .Values.ingress.host }}
-      http:
+      https:
         paths:
           - path: /
             pathType: Prefix
